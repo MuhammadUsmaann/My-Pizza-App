@@ -114,10 +114,10 @@ $(document).ready(function () {
         username: {
           required: true,
         },
-        radiogroup1: {
+        customRadioInline1: {
           required: true,
         },
-        radiogroup2: {
+        customRadioInline2: {
           required: true,
         },
         building1: {

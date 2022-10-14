@@ -3844,12 +3844,17 @@ input[type=number]::-webkit-outer-spin-button {
 
 /*==================== Cart ====================*/
 /*==================== Checkout ====================*/
+.custom-control-input:checked~.custom-control-label::before{
+     background-color: #e80f0e !important;
+     border-color: #e80f0e !important;
+     outline: none !important;
+}
 .main_checkout {
      float: left;
      width: 100%;
      padding-top: 65px;
      padding-bottom: 155px;
-     background: url(../images/cart_bg.png);
+     background: url(../images/global_bg.jpg);
      background-repeat: repeat;
      background-position: center top;
 }
@@ -6537,9 +6542,7 @@ form .help-block {
 }
 
 #faqaccordianmain #faq .card .card-header .btn-header-link:after {
-     content: "\f107";
-     font-family: 'Font Awesome 5 Free';
-     font-weight: 900;
+     content: url('../images/arrowdown.png') !important;
      float: right;
 }
 
@@ -6578,3 +6581,18 @@ form .help-block {
      text-transform: capitalize;
      font-family: 'Roboto Slab', serif;
 }
+
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+     width: 7px;
+ }
+ 
+ ::-webkit-scrollbar-track {
+     background: transparent;
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+     background: #e81c0c;
+ }

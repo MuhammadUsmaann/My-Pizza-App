@@ -10,28 +10,30 @@
     <meta content="" name="keywords" />
     <title>Checkout | Order Online Fast Food & Pizza</title>
     <!-- Fonts Here-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800"
+        rel="stylesheet">
     <!-- Fonts here-->
     <!-- Style Here -->
-    <link rel="stylesheet" href="css/slick.css" >
-    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
     <!-- bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!-- JS -->
     <script src="js/popper.min.js" defer></script>
-<script src="js/testing.js" defer></script>
- <script src="js/data.js" defer></script>
+    <script src="js/testing.js" defer></script>
+    <script src="js/data.js" defer></script>
     <script src="js/jquery.min.js" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="custom-scrollbar">
         <!-- Header Start Here -->
         <header id="Header">
             <div class="main_header inner_page">
@@ -40,7 +42,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="logo">
-                                    <a href="index.html" title="Crave Ordering"><img src="images/logo.png" alt="Crave Ordering"></a>
+                                    <a href="index.html" title="Crave Ordering"><img src="images/logo.png"
+                                            alt="Crave Ordering"></a>
                                 </div>
                                 <div class="nav_manu">
                                     <div class="Menu_list">
@@ -76,7 +79,8 @@
             <div class="device">
                 <nav class="main-nav" id="main-nav">
                     <div class="logo">
-                        <a href="index.html" title="Crave Ordering"><img src="images/logoBlack.png" alt="Crave Ordering"></a>
+                        <a href="index.html" title="Crave Ordering"><img src="images/logoBlack.png"
+                                alt="Crave Ordering"></a>
                     </div>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -120,43 +124,70 @@
 
                                         <div class="checkout-form">
                                             <ul>
-                                                <li>
-                                                    <label for="FirstName">First Name<span>*</span></label>
-                                                    <input type="text" class="form-control" id="FirstName" name="firstname">
+                                                <li class="w-100">
+                                                    <h4 class="title_checklist">Checkout type:</h4>
+                                                    <div class="d-flex justify-content-left">
+                                                        <div class="custom-control custom-radio custom-control-inline" >
+                                                            <input type="radio" id="customRadioInline1"
+                                                                name="customRadioInline1" class="custom-control-input" onchange="showCheckoutDileveryAddress()">
+                                                            <label class="custom-control-label"
+                                                                for="customRadioInline1">Delivery</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="customRadioInline2"
+                                                                name="customRadioInline1" class="custom-control-input" onchange="hideCheckoutDileveryAddress()">
+                                                            <label class="custom-control-label"
+                                                                for="customRadioInline2">Pick-up</label>
+                                                        </div>
+                                                    </div>
                                                 </li>
-                                                <li>
-                                                    <label for="LastName">Last Name<span>*</span></label>
-                                                    <input type="text" class="form-control" id="LastName" name="lastname">
+                                                <li class="fullwidth d-none" id="checkoutdileveryaddress">
+                                                    <label for="Address">Delivery Address<span>*</span></label>
+                                                    <input type="text" class="form-control" placeholder="Street Address"
+                                                        name="address" id="Address">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Apartment, Suite, Unit etc. (optional)">
                                                 </li>
                                                 <li class="fullwidth">
-                                                    <label for="CompanyName">Company Name</label>
-                                                    <input type="text" class="form-control" id="CompanyName" name="Company Name">
+                                                    <label for="Address">Billing Address<span>*</span></label>
+                                                    <input type="text" class="form-control" placeholder="Street Address"
+                                                        name="address" id="Address">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Apartment, Suite, Unit etc. (optional)">
                                                 </li>
+
+
+                                                
+                                                <li class="w-100">
+                                                    <h4 class="title_checklist">Payment type:</h4>
+                                                    <div class="d-flex justify-content-left">
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="customRadioInline3"
+                                                                name="customRadioInline2" class="custom-control-input">
+                                                            <label class="custom-control-label"
+                                                                for="customRadioInline3">Online</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="customRadioInline4"
+                                                                name="customRadioInline2" class="custom-control-input">
+                                                            <label class="custom-control-label"
+                                                                for="customRadioInline4">On-Delivery</label>
+                                                        </div>
+                                                    </div>
+                                                </li>
+
                                                 <li>
                                                     <label for="EmailAddress">Email Address<span>*</span></label>
-                                                    <input type="email" class="form-control" id="EmailAddress" name="checkoutemail">
+                                                    <input type="email" class="form-control" id="EmailAddress"
+                                                        name="checkoutemail">
                                                 </li>
                                                 <li>
                                                     <label for="PhoneNumber">Phone Number<span>*</span></label>
-                                                    <input type="number" class="form-control" id="PhoneNumber" name="phone">
+                                                    <input type="number" class="form-control" id="PhoneNumber"
+                                                        name="phone">
                                                 </li>
-                                                <li class="fullwidth">
-                                                    <label for="Address">Address<span>*</span></label>
-                                                    <input type="text" class="form-control" placeholder="Street Address" name="address" id="Address">
-                                                    <input type="text" class="form-control" placeholder="Apartment, Suite, Unit etc. (optional)">
-                                                </li>
-                                                <li>
-                                                    <label for="PostcodeZip">Post code / Zip<span>*</span></label>
-                                                    <input type="text" class="form-control" id="PostcodeZip" name="postcode">
-                                                </li>
-                                                <li>
-                                                    <label for="Town">Town / City<span>*</span></label>
-                                                    <input type="text" class="form-control" id="Town" name="town">
-                                                </li>
-                                                <li class="fullwidth">
-                                                    <label for="OrderNotes">Order Notes</label>
-                                                    <textarea class="form-control" id="OrderNotes"></textarea>
-                                                </li>
+
+
 
                                             </ul>
                                         </div>
@@ -260,7 +291,9 @@
                                                 </div>
                                                 <ul>
                                                     <li>
-                                                        <button type="submit" class="checkout-btn red_btn trans hvr-float-shadow" name="checkout">Place Order</button>
+                                                        <button type="submit"
+                                                            class="checkout-btn red_btn trans hvr-float-shadow"
+                                                            name="checkout">Place Order</button>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -283,10 +316,10 @@
                         <div class="main_quickorder">
                             <h3 class="title">Call Us for Quick Order</h3>
                             <div class="cntct typewriter-effect">
-                  <span class="call_desk">
-                  <a href="tel:+01234567890" id="typewriter_num"></a>
-                  </span>
-                </div>
+                                <span class="call_desk">
+                                    <a href="tel:+01234567890" id="typewriter_num"></a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -301,30 +334,39 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="M_footer">
-                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 quick_links"><div class="title">Quick Links</div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 quick_links">
+                                    <div class="title">Quick Links</div>
                                     <div class="main_cnt">
                                         <ul>
                                             <li><a href="about.html" class="trans" title="About us">About us</a></li>
                                             <li><a href="faq.html" class="trans" title="Faq">Faq</a></li>
-                                            <li><a href="contactus.html" class="trans" title="Contacts">Contacts</a></li>
+                                            <li><a href="contactus.html" class="trans" title="Contacts">Contacts</a>
+                                            </li>
                                             <li><a href="login.html" class="trans" title="Login">Login</a></li>
                                             <li><a href="login.html" class="trans" title="Register">Register</a></li>
-                                            <li><a href="terms_conditions.html" class="trans" title="Terms and conditions">Terms and conditions</a></li>
+                                            <li><a href="terms_conditions.html" class="trans"
+                                                    title="Terms and conditions">Terms and conditions</a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 location">
                                     <div class="title">Our Location</div>
-                                    <div class="main_cnt"> <span class="address"><a href="#">234 Main Street, Uni 01, New Mexico City</a></span> <span class="time1">Mon - Fri: 08:00 am - 10:00 pm</span> <span class="time2">Sat - Sun: 10:00 am - 11:00 pm<strong></strong></span> <span class="conact"><a href="tel:+01234567890">+01 (234) 56 56 789</a></span> </div>
+                                    <div class="main_cnt"> <span class="address"><a href="#">234 Main Street, Uni 01,
+                                                New Mexico City</a></span> <span class="time1">Mon - Fri: 08:00 am -
+                                            10:00 pm</span> <span class="time2">Sat - Sun: 10:00 am - 11:00
+                                            pm<strong></strong></span> <span class="conact"><a
+                                                href="tel:+01234567890">+01 (234) 56 56 789</a></span> </div>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 subscribe">
                                     <div class="title">Subscribe Us</div>
                                     <div class="main_cnt">
                                         <p class="sbcr_label">Subscribe to the La Vie newsletter to
-                                            <br> get regular update about offers</p>
+                                            <br> get regular update about offers
+                                        </p>
                                         <form method="post" id="subscribeform" action="thank-you.html">
                                             <div class="sbcrb_input">
-                                                <input type="text" name="subscribeemail" class="form-control" placeholder="Enter your email">
+                                                <input type="text" name="subscribeemail" class="form-control"
+                                                    placeholder="Enter your email">
                                                 <button class="subscribebutton send" name="getbutton" type="submit">
                                                 </button>
                                             </div>
@@ -340,14 +382,20 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="payment"> <span>Payment Options</span> <span class="pay_cards"><img src="images/card_img.png" alt=""></span> </div>
+                            <div class="payment"> <span>Payment Options</span> <span class="pay_cards"><img
+                                        src="images/card_img.png" alt=""></span> </div>
                             <div class="social">
                                 <ul>
-                                    <li><a href="#" class="trans" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li><a href="#" class="trans" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li><a href="#" class="trans" title="Google Plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                    <li><a href="#" class="trans" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                    <li><a href="#" class="trans" title="Pinterest"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                    <li><a href="#" class="trans" title="Facebook"><i class="fa fa-facebook"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a href="#" class="trans" title="Twitter"><i class="fa fa-twitter"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a href="#" class="trans" title="Google Plus"><i class="fa fa-google-plus"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a href="#" class="trans" title="Instagram"><i class="fa fa-instagram"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a href="#" class="trans" title="Pinterest"><i class="fa fa-pinterest-p"
+                                                aria-hidden="true"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -356,7 +404,11 @@
             </div>
             <div class="copyright">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <p>© <a href="index.html" class="trans" title="Crave Ordering">Crave Ordering</a> <script type="text/javascript">document.write(new Date().getFullYear());</script>, All rights reserved </p>                </div>
+                    <p>© <a href="index.html" class="trans" title="Crave Ordering">Crave Ordering</a>
+                        <script type="text/javascript">document.write(new Date().getFullYear());</script>, All rights
+                        reserved
+                    </p>
+                </div>
             </div>
         </footer>
 
