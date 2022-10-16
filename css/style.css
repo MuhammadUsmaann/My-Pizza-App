@@ -436,6 +436,17 @@ textarea.form-control {
   display: none;
 }
 
+.main-title{
+  font-size: 46px;
+  font-family: "Roboto Slab", sans-serif !important;
+  line-height: 40px;
+  color: white;
+padding: 10px 29px;
+font-weight: 500;
+}
+.main-title:hover{
+  color: #e80f0e;
+}
 .main_header {
   display: inline-block;
   width: 100%;
