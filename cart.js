@@ -2,41 +2,41 @@ $(document).ready(function () {
   var productItem = [
     {
       productName: "All Meat ",
-      price: "1800.00",
+      price: "20.00",
       photo: "pizza_img3.jpg",
     },
     {
       productName: "Lunch Special Pizza ",
-      price: "800.00",
+      price: "17.00",
       photo: "pizza_img5.png",
     },
     {
       productName: "Barbecue Chicken ",
-      price: "500.00",
+      price: "15.00",
       photo: "pizza_img4.jpg",
     },
     {
       productName: "Tuscan Roma ",
-      price: "1000.00",
+      price: "18.00",
       photo: "pizza_img1.jpg",
     },
-	{
-		productName: "Barbecue Chicken ",
-		price: "500.00",
-		photo: "pizza_img4.jpg",
-	  },
-	  {
-		productName: "Tuscan Roma ",
-		price: "1000.00",
-		photo: "pizza_img1.jpg",
-	  },
+    {
+      productName: "Buffalo Chicken",
+      price: "20.00",
+      photo: "pizza_img6.jpg",
+    },
+    {
+      productName: "Max & Cheese",
+      price: "15.00",
+      photo: "pizza_img2.jpg",
+    },
   ];
   showProductGallery(productItem);
   showCartTable();
 });
 
 function addToCart(element) {
-	alert('Product added to Cart.')
+  alert("Product added to Cart.");
   var productParent = $(element).closest("div.card");
 
   var price = $(productParent).find(".price span").text();
@@ -121,7 +121,9 @@ function showCartTable() {
   $("#cartTableBody").html(cartRowHTML);
   $("#itemCount").text(itemCount);
   $("#totalAmount").text("$" + grandTotal.toFixed(2));
-	document.getElementById("cartcount").innerHTML = `Cart : ${grandTotal.toFixed(2)}$`;
+  document.getElementById("cartcount").innerHTML = `Cart : ${grandTotal.toFixed(
+    2
+  )}$`;
 }
 
 function showProductGallery(product) {

@@ -184,6 +184,10 @@ label.error {
   display: none;
 }
 
+.text-red-focused{
+  color: #fb0101 !important;
+  font-weight: bold !important;
+}
 label.error:after {
   border-color: #fb0101 transparent transparent;
   border-image: none;
@@ -228,6 +232,7 @@ select option {
   left: 0;
   top: 0;
   bottom: 0;
+  height: 257px !important;
   margin: auto;
   max-width: inherit;
   width: 100%;

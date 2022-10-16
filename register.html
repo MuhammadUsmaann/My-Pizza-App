@@ -28,7 +28,7 @@
     <!-- JS -->
     <script src="js/popper.min.js" defer></script>
     <script src="js/testing.js" defer></script>
- <script src="js/data.js" defer></script>
+    <script src="js/data.js" defer></script>
     <script src="js/jquery.min.js" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
 </head>
@@ -52,7 +52,7 @@
                                             <li><a href="about.html" class="trans">About</a></li>
                                             <li><a href="orderpage.html" class="trans">Order</a></li>
                                             <li><a href="login.html" class="trans">Login</a></li>
-                                            <li><a href="register.html" class="trans">Register</a></li>
+                                            <li><a href="register.html" class="trans text-red-focused">Register</a></li>
                                         </ul>
                                     </div>
                                     <!-- <div class="Cart">
@@ -78,8 +78,7 @@
             <div class="device">
                 <nav class="main-nav" id="main-nav">
                     <div class="logo">
-                        <a href="index.html" title="Pizza Shop"><img src="images/logoBlack.png"
-                                alt="Pizza Shop"></a>
+                        <a href="index.html" title="Pizza Shop"><img src="images/logoBlack.png" alt="Pizza Shop"></a>
                     </div>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -152,28 +151,45 @@
                                     <div class="register_box">
                                         <h2 class="title">Create New Account</h2>
                                         <h4 class="create_ac">Create your Account</h4>
-                                        <form method="post" id="registrationform" action="user-info.html">
+                                        <form method="post" id="registrationform" onsubmit="validateForm()"  method="post" action="user-info.html">
                                             <ul>
+                                                <li>
+                                                    <label for="EmailAddress">Username</label>
+                                                    <input class="form-control" name="registerusername"
+                                                        title="Email Address" type="email">
+                                                </li>
+                                                <li>
+                                                    <label for="Password">Password</label>
+                                                    <input class="form-control" minlength="8" title="Password" id="Password"
+                                                        name="registerpassword" type="password">
+                                                </li>
                                                 <li>
                                                     <label for="EmailAddress">Email Address</label>
                                                     <input class="form-control" name="registeremail"
                                                         title="Email Address" type="email">
                                                 </li>
                                                 <li>
-                                                    <label for="Password">Password</label>
-                                                    <input class="form-control" title="Password" id="Password"
-                                                        name="registerpassword" type="password">
+                                                    <h4 class="title_checklist">Gender:</h4>
+                                                    <div class="d-flex justify-content-left">
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="customRadioInline1"
+                                                                name="registergender" class="custom-control-input">
+                                                            <label class="custom-control-label"
+                                                                for="customRadioInline1">Male</label>
+                                                        </div>
+                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" id="customRadioInline2"
+                                                                name="registergender" class="custom-control-input">
+                                                            <label class="custom-control-label"
+                                                                for="customRadioInline2">Female</label>
+                                                        </div>
+                                                    </div>
                                                 </li>
+                                                
                                                 <li>
-                                                    <label for="Password">Confirm Password</label>
-                                                    <input class="form-control" title="ConfirmPassword"
-                                                        id="ConfirmPassword" name="registerconfirmpassword"
-                                                        type="password">
-                                                </li>
-                                                <li>
-                                                    <label for="Password">Phone Number</label>
-                                                    <input class="form-control" title="registerphone" id="registerphone"
-                                                        name="registerphone" type="number">
+                                                    <label for="Password">Address</label>
+                                                    <input class="form-control" title="registeraddress" id="registeraddress"
+                                                        name="registeraddress" type="number">
                                                 </li>
                                                 <li>
                                                     <button type="submit"
@@ -239,7 +255,7 @@
                                             <li><a href="contactus.html" class="trans" title="Contacts">Contacts</a>
                                             </li>
                                             <li><a href="login.html" class="trans" title="Login">Login</a></li>
-                                            <li><a href="login.html" class="trans" title="Register">Register</a></li>
+                                            <li><a href="register.html" class="trans" title="Register">Register</a></li>
                                             <li><a href="terms_conditions.html" class="trans"
                                                     title="Terms and conditions">Terms and conditions</a></li>
                                         </ul>

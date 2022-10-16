@@ -134,6 +134,7 @@
                                                     
                                                     <li>
                                                         <div class="row">
+                                                            <span id="msg"></span>
 
                                                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <h4 class="title_checklist">Gender:</h4>
@@ -142,7 +143,7 @@
                                                                         class="custom-control custom-radio custom-control-inline">
                                                                         <input type="radio" id="customRadioInline1"
                                                                             name="customRadioInline1"
-                                                                            class="custom-control-input">
+                                                                            class="custom-control-input" required>
                                                                         <label class="custom-control-label"
                                                                             for="customRadioInline1">Male</label>
                                                                     </div>
@@ -150,7 +151,7 @@
                                                                         class="custom-control custom-radio custom-control-inline">
                                                                         <input type="radio" id="customRadioInline2"
                                                                             name="customRadioInline1"
-                                                                            class="custom-control-input">
+                                                                            class="custom-control-input" >
                                                                         <label class="custom-control-label"
                                                                             for="customRadioInline2">Female</label>
                                                                     </div>
@@ -228,11 +229,11 @@
                                                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <label for="Suburb1">Suburb<span>*</span></label>
                                                                 <input type="text" class="form-control" id="Suburb1"
-                                                                    name="checkoutemail">
+                                                                    name="suburb1">
                                                             </div>
                                                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <label for="PhoneNumber">Postcode<span>*</span></label>
-                                                                <input type="number" class="form-control"
+                                                                <input type="number" minlength="4" class="form-control"
                                                                     id="PhoneNumber" name="postcode1">
                                                             </div>
 
@@ -246,8 +247,9 @@
                                                                 <label for="Building2">Building
                                                                     No.<span>*</span></label>
                                                                 <input type="text" class="form-control" id="Building2"
-                                                                    name="building2 ">
+                                                                    name="building2 " required>
                                                             </div>
+                                                            
                                                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <label for="street2">Street<span>*</span></label>
                                                                 <input type="text" class="form-control" id="street2"
@@ -258,11 +260,11 @@
                                                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <label for="Suburb2">Suburb<span>*</span></label>
                                                                 <input type="text" class="form-control" id="Suburb2"
-                                                                    name="checkoutemail">
+                                                                    name="suburb2">
                                                             </div>
                                                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <label for="postcode2">Postcode<span>*</span></label>
-                                                                <input type="number" class="form-control" id="postcode2"
+                                                                <input type="number" minlength="4" class="form-control" id="postcode2"
                                                                     name="postcode2">
                                                             </div>
 
@@ -276,7 +278,7 @@
                                                     </li>
                                                     <li class="fullwidth">
                                                         <label for="OrderNotes">Order Notes</label>
-                                                        <textarea class="form-control" id="OrderNotes"></textarea>
+                                                        <textarea class="form-control" id="OrderNotes"  required></textarea>
                                                     </li>
 
                                                     <li>
@@ -285,7 +287,7 @@
                                                                 class="register-btn red_btn trans squre-btn hvr-ripple-out"
                                                                 name="Register">Register</button>
                                                             <button onclick="resetForm()"
-                                                                class="register-btn red_btn trans squre-btn hvr-ripple-out"
+                                                                class=" red_btn trans squre-btn hvr-ripple-out"
                                                                 name="Reset">Reset</button>
                                                         </div>
                                                     </li>

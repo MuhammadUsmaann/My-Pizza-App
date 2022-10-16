@@ -138,9 +138,13 @@ $(document).ready(function () {
         postcode2: {
           required: true,
         },
+        suburb1: {
+          required: true,
+        },
+        suburb2:{
+          required:true
+        },
       },
-      
-      
     });
   });
   /*========== New Account validation  ========= */
@@ -155,7 +159,7 @@ $(document).ready(function () {
           required: true,
           email: true,
         },
-        registerphone: {
+        registerusername: {
           required: true,
           // phone: true
         },
@@ -163,7 +167,11 @@ $(document).ready(function () {
           required: true,
           // password: true
         },
-        registerconfirmpassword: {
+        registeraddress: {
+          required: true,
+          // password: true
+        },
+        registergender: {
           required: true,
           // password: true
         },
@@ -175,15 +183,20 @@ $(document).ready(function () {
         },
         registerpassword: {
           required: "Please enter your valid password",
-          minlength: "Enter at least 10 character",
+          minlength: "Enter at least 8 character",
         },
-        registerconfirmpassword: {
-          required: "Please enter your valid password",
-          minlength: "Enter at least 10 character",
+        registerusername: {
+          required: "Please enter your name",
         },
         registerphone: {
           required: "Please enter your valid Phone ",
           minlength: "Enter at least 12 digits",
+        },
+        registeraddress: {
+          required: "Please enter your address ",
+        },
+        registergender: {
+          required: "Please select your gender ",
         },
       },
     });
@@ -238,7 +251,8 @@ $(document).ready(function () {
           required: true,
           number: true,
         },
-        town: {
+        
+        checkoutcardno: {
           required: true,
         },
       },
@@ -252,15 +266,17 @@ $(document).ready(function () {
         },
         phone: {
           required: "Please enter your contact number",
-          number: "enter number",
+          number: "Enter number",
         },
         address: "Please Enter your address",
 
         postcode: {
           required: "Please enter Post Code",
-          number: "enter valid code",
+          number: "Enter 4 digit number",
         },
-        town: "Please Enter your town",
+        checkoutcardno: {
+          required: "Please enter card number",
+        },
       },
     });
   });
