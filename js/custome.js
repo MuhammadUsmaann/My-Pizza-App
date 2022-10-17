@@ -95,14 +95,14 @@ $(document).ready(function () {
           email: true,
         },
         password: {
-          minlength: 10,
+          minlength: 8,
           required: true,
         },
       },
       messages: {
         password: {
           required: "Please enter your valid password",
-          minlength: "Enter at least 10 character",
+          minlength: "Enter at least 8 character",
         },
         emailaddress: {
           required: "Please enter your email address",
