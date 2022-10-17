@@ -160,18 +160,19 @@
                                             <ul>
                                                 <li class="w-100">
                                                     <h4 class="title_checklist">Checkout type:</h4>
+                                                    
                                                     <div class="d-flex justify-content-left">
                                                         <div class="custom-control custom-radio custom-control-inline">
                                                             <input type="radio" id="customRadioInline1"
                                                                 name="customRadioInline1" class="custom-control-input"
-                                                                onchange="showCheckoutDileveryAddress()">
+                                                                onchange="showCheckoutDileveryAddress()"  required/>
                                                             <label class="custom-control-label"
                                                                 for="customRadioInline1">Delivery</label>
                                                         </div>
                                                         <div class="custom-control custom-radio custom-control-inline">
                                                             <input type="radio" id="customRadioInline2"
                                                                 name="customRadioInline1" class="custom-control-input"
-                                                                onchange="hideCheckoutDileveryAddress()">
+                                                                onchange="hideCheckoutDileveryAddress()" checked="checked" required/>
                                                             <label class="custom-control-label"
                                                                 for="customRadioInline2">Pick-up</label>
                                                         </div>
@@ -183,7 +184,7 @@
                                                         name="address" id="streetaddress">
                                                     <input type="text" class="form-control"
                                                         placeholder="Apartment, Suite, Unit etc. (optional)"
-                                                        id="apartementaddress">
+                                                        id="apartementaddress" required>
                                                 </li>
                                                 <li class="fullwidth">
                                                     <div class="d-flex align-items-center">
@@ -206,7 +207,7 @@
                                                         name="address" id="billingstreetaddress">
                                                     <input type="text" class="form-control"
                                                         placeholder="Apartment, Suite, Unit etc. (optional"
-                                                        id="billingapartementaddress" />
+                                                        id="billingapartementaddress" required/>
                                                 </li>
 
                                                 <li>
@@ -231,7 +232,7 @@
                                                         </div>
                                                         <div class="custom-control custom-radio custom-control-inline">
                                                             <input type="radio" id="customRadioInline4"
-                                                                onchange="hideOnlinePayment()" name="customRadioInline2"
+                                                                onchange="hideOnlinePayment()" checked="checked" name="customRadioInline2"
                                                                 class="custom-control-input">
                                                             <label class="custom-control-label"
                                                                 for="customRadioInline4">On-Delivery</label>

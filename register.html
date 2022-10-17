@@ -151,68 +151,60 @@
                                     <div class="register_box">
                                         <h2 class="title">Create New Account</h2>
                                         <h4 class="create_ac">Create your Account</h4>
-                                        <form method="post" id="registrationform" onsubmit="validateForm()"  method="post" action="user-info.html">
+                                        <form method="post" id="registrationform" onsubmit="validateResgisterForm()"
+                                            action="user-info.html">
                                             <ul>
+                                                
                                                 <li>
-                                                    <label for="EmailAddress">Username</label>
+                                                    <label for="registeredname">Username</label>
                                                     <input class="form-control" name="registerusername"
-                                                        title="Email Address" type="email">
+                                                        title="Email Address" id="registeredname"
+                                                        onchange="setNameUserInfo()" type="text" pattern="[A-Za-z]{3}">
                                                 </li>
                                                 <li>
-                                                    <label for="Password">Password</label>
-                                                    <input class="form-control" minlength="8" title="Password" id="Password"
-                                                        name="registerpassword" type="password">
+                                                    <label for="registerPassword">Password</label>
+                                                    <input class="form-control" minlength="8" title="Password"
+                                                        id="registerPassword" name="registerpassword" type="password">
                                                 </li>
                                                 <li>
-                                                    <label for="EmailAddress">Email Address</label>
+                                                    <label for="registeremailaddress">Email Address</label>
                                                     <input class="form-control" name="registeremail"
-                                                        title="Email Address" type="email">
+                                                        title="Email Address" type="email" id="registeremailaddress">
                                                 </li>
                                                 <li>
                                                     <h4 class="title_checklist">Gender:</h4>
                                                     <div class="d-flex justify-content-left">
                                                         <div class="custom-control custom-radio custom-control-inline">
-                                                            <input type="radio" id="customRadioInline1"
-                                                                name="registergender" class="custom-control-input">
+                                                            <input type="radio" id="registercustomRadioInline1"
+                                                                name="registergender" class="custom-control-input"
+                                                                checked="checked" required>
                                                             <label class="custom-control-label"
-                                                                for="customRadioInline1">Male</label>
+                                                                for="registercustomRadioInline1">Male</label>
                                                         </div>
                                                         <div class="custom-control custom-radio custom-control-inline">
-                                                            <input type="radio" id="customRadioInline2"
+                                                            <input type="radio" id="registercustomRadioInline2"
                                                                 name="registergender" class="custom-control-input">
                                                             <label class="custom-control-label"
-                                                                for="customRadioInline2">Female</label>
+                                                                for="registercustomRadioInline2">Female</label>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                
+
                                                 <li>
-                                                    <label for="Password">Address</label>
-                                                    <input class="form-control" title="registeraddress" id="registeraddress"
-                                                        name="registeraddress" type="number">
+                                                    <label for="registeraddress">Address</label>
+                                                    <input class="form-control" title="registeraddress"
+                                                        id="registeraddress" name="registeraddress" type="text">
                                                 </li>
                                                 <li>
                                                     <button type="submit"
                                                         class="register-btn red_btn trans squre-btn hvr-ripple-out"
                                                         name="Register">Register</button>
                                                 </li>
+
                                             </ul>
                                         </form>
-                                        <!-- <h4 class="title_checklist">Sign up today and you will be able to :</h4>
-                                        <ul class="checklist">
-                                            <li class="checkbox">
-                                                <input id="check1" type="checkbox" name="check" value="Bike">
-                                                <label for="check1">Speed your way through the checkout</label>
-                                            </li>
-                                            <li class="checkbox">
-                                                <input id="check2" type="checkbox" name="check" value="Bike">
-                                                <label for="check2">Track your orders easily</label>
-                                            </li>
-                                            <li class="checkbox">
-                                                <input id="check3" type="checkbox" name="check" value="Bike">
-                                                <label for="check3">Keep a record of all your purchases</label>
-                                            </li>
-                                        </ul> -->
+
+
                                     </div>
                                 </div>
                             </div>

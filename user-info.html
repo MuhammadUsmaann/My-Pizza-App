@@ -31,7 +31,8 @@
     <script src="js/data.js" defer></script>
     <script src="js/jquery.min.js" defer></script>
     <script src="js/bootstrap.min.js" defer></script>
-   
+
+
 </head>
 
 <body>
@@ -58,7 +59,7 @@
                                     </div>
                                     <div class="Cart">
                                         <a href="cart.html" title="Cart">
-                                            <span class="Cart_count" id = "cartcount">Cart : (0) $00.00</span>
+                                            <span class="Cart_count" id="cartcount">Cart : (0) $00.00</span>
                                             <!-- <i class="fa fa-shopping-cart" aria-hidden="true"></i> -->
                                             <img class="cart_img" src="images/cart_1.png" alt="cart_1">
                                         </a>
@@ -80,8 +81,7 @@
             <div class="device">
                 <nav class="main-nav" id="main-nav">
                     <div class="logo">
-                        <a href="index.html" title="Pizza Shop"><img src="images/logoBlack.png"
-                                alt="Pizza Shop"></a>
+                        <a href="index.html" title="Pizza Shop"><img src="images/logoBlack.png" alt="Pizza Shop"></a>
                     </div>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -123,14 +123,16 @@
                                 <div class="login_left col-12">
                                     <div class="login_box">
                                         <h2 class="title">User Information</h2>
-                                        <form method="post" id="userInfoForm" action="index.html">
+                                        <form method="post" id="userInfoForm"  action="index.html">
                                             <div class="login_form">
                                                 <ul>
                                                     <li>
                                                         <label for="FirstName">User name<span>*</span></label>
-                                                        <input type="text" class="form-control" id="FirstName"
-                                                            name="username">
+                                                        <input type="text" readonly class="form-control"
+                                                            id="nameuserinfo" name="username">
+                                                            
                                                     </li>
+
                                                     
                                                     <li>
                                                         <div class="row">
@@ -143,7 +145,7 @@
                                                                         class="custom-control custom-radio custom-control-inline">
                                                                         <input type="radio" id="customRadioInline1"
                                                                             name="customRadioInline1"
-                                                                            class="custom-control-input" required>
+                                                                            class="custom-control-input" checked="checked">
                                                                         <label class="custom-control-label"
                                                                             for="customRadioInline1">Male</label>
                                                                     </div>
@@ -151,7 +153,7 @@
                                                                         class="custom-control custom-radio custom-control-inline">
                                                                         <input type="radio" id="customRadioInline2"
                                                                             name="customRadioInline1"
-                                                                            class="custom-control-input" >
+                                                                            class="custom-control-input">
                                                                         <label class="custom-control-label"
                                                                             for="customRadioInline2">Female</label>
                                                                     </div>
@@ -164,7 +166,7 @@
                                                                         class="custom-control custom-radio custom-control-inline">
                                                                         <input type="radio" id="customRadioInline3"
                                                                             name="customRadioInline2"
-                                                                            class="custom-control-input">
+                                                                            class="custom-control-input" checked="checked">
                                                                         <label class="custom-control-label"
                                                                             for="customRadioInline3">Vegetarian</label>
                                                                     </div>
@@ -177,12 +179,28 @@
                                                                             for="customRadioInline4">Nonvegetarian</label>
                                                                     </div>
                                                                 </div>
-                                                                
+
 
                                                             </div>
 
                                                         </div>
 
+                                                    </li>
+                                                    <li>
+                                                        <label for="fvrtpizza">Choose your fovourite pizza:
+                                                            Select:
+                                                            </label>
+                                                        <select class="custom-select form-control custom-select-sm" name="fvrtpizza" required id="fvrtpizza">
+                                                            <option value="">Choose...</option>
+                                                            <option value="1">Pepperoni</option>
+                                                            <option value="2">All Meat</option>
+                                                            <option value="2">Tuscan Roma</option>
+                                                            <option value="2">Buffalo Chicken</option>
+                                                            <option value="2">Max & Cheese</option>
+                                                            <option value="2">Barbecue Chicken</option>
+                                                            <option value="2">Lunch Special Pizza</option>
+
+                                                        </select>
                                                     </li>
 
                                                     <li>
@@ -249,7 +267,7 @@
                                                                 <input type="text" class="form-control" id="Building2"
                                                                     name="building2 " required>
                                                             </div>
-                                                            
+
                                                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <label for="street2">Street<span>*</span></label>
                                                                 <input type="text" class="form-control" id="street2"
@@ -264,8 +282,8 @@
                                                             </div>
                                                             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                                                                 <label for="postcode2">Postcode<span>*</span></label>
-                                                                <input type="number" minlength="4" class="form-control" id="postcode2"
-                                                                    name="postcode2">
+                                                                <input type="number" minlength="4" class="form-control"
+                                                                    id="postcode2" name="postcode2">
                                                             </div>
 
                                                         </div>
@@ -278,12 +296,13 @@
                                                     </li>
                                                     <li class="fullwidth">
                                                         <label for="OrderNotes">Order Notes</label>
-                                                        <textarea class="form-control" id="OrderNotes"  required></textarea>
+                                                        <textarea class="form-control" id="OrderNotes"
+                                                            ></textarea>
                                                     </li>
 
                                                     <li>
                                                         <div class="d-flex justify-content-between align-items-center">
-                                                            <button  type="submit"
+                                                            <button type="submit"
                                                                 class="register-btn red_btn trans squre-btn hvr-ripple-out"
                                                                 name="Register">Register</button>
                                                             <button onclick="resetForm()"

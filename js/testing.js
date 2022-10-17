@@ -1,7 +1,3 @@
-// const addToCart=()=>{
-//     alert("Added")
-// }
-
 const showCheckoutDileveryAddress = () => {
   document.getElementById("checkoutdileveryaddress").classList.add("d-block");
   document.getElementById("copycheck").classList.add("d-flex");
@@ -22,46 +18,33 @@ const hideOnlinePayment = () => {
 
 function resetForm() {
   document.getElementById("userInfoForm").reset();
+  var usernameregistered = sessionStorage.getItem("registeredusername");
+  document.getElementById("nameuserinfo").value = usernameregistered;
 }
+
 function Creditcarddigitmore() {
   document.getElementById("cardno16").classList.add("d-block");
   document.getElementById("cardno15").classList.remove("d-block");
 }
+
 function Creditcarddigitless() {
   document.getElementById("cardno16").classList.remove("d-block");
   document.getElementById("cardno15").classList.add("d-block");
 }
 
-// function validateForm() {
-//   var radios = document.getElementsByName("registergender");
-//   var formValid = false;
+function validateResgisterForm() {
+  var username = document.getElementById("registeredname").value;
+  // var pattern = /^[a-zA-Z ]+$/;
+  // if (username.match(pattern)) {
+  //   alert("Name contains symbols.\n")
+  // }
+  sessionStorage.setItem("registeredusername", username);
+}
 
-//   var i = 0;
-//   while (!formValid && i < radios.length) {
-//       if (radios[i].checked) formValid = true;
-//       i++;
-//   }
-
-//   if (!formValid) alert("Please select gender!");
-//   return formValid;
-// }
-
-$("input[type=submit]").click(function () {
-  alert("sfsdfsd");
-  var atLeastOneChecked = false;
-  $("input[type=radio]").each(function () {
-    // If radio button not checked
-    // display alert message
-    if ($(this).attr("checked") != "checked") {
-      // Alert message by displaying
-      // error message
-      $("#msg").html(
-        "<span class='alert alert-danger' id='error'>" +
-          "Please Choose atleast one</span>"
-      );
-    }
-  });
-});
+var usernameregistered = sessionStorage.getItem("registeredusername");
+if (usernameregistered!=""){
+  document.getElementById("nameuserinfo").value = usernameregistered;
+}
 
 function copyDileveryAddress() {
   var checkbox = document.getElementById("copydileveryaddres");
@@ -76,9 +59,8 @@ function copyDileveryAddress() {
       var billingapartement = (document.getElementById(
         "billingapartementaddress"
       ).value = apartement);
-    }
-    else{
-      alert('Please fill the Dilevery Address first')
+    } else {
+      alert("Please fill the Dilevery Address first");
       $("#copydileveryaddres").prop("checked", false);
     }
   } else {
@@ -89,3 +71,4 @@ function copyDileveryAddress() {
     ).value = "");
   }
 }
+

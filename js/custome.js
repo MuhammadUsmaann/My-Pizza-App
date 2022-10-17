@@ -1,4 +1,14 @@
 $(document).ready(function () {
+
+    $.validator.addMethod(
+      "regex",
+      function(value, element, regexp) {
+          var check = false;
+          return this.optional(element) || regexp.test(value);
+      },
+      "Please check your input."
+  );
+
   // scrolling -----------------------
   $(document).ready(function () {
     let scroll_link = $(".scroll");
@@ -138,12 +148,7 @@ $(document).ready(function () {
         postcode2: {
           required: true,
         },
-        suburb1: {
-          required: true,
-        },
-        suburb2:{
-          required:true
-        },
+       
       },
     });
   });
@@ -162,6 +167,7 @@ $(document).ready(function () {
         registerusername: {
           required: true,
           // phone: true
+          regex : /^[a-zA-Z ]+$/
         },
         registerpassword: {
           required: true,
@@ -178,22 +184,23 @@ $(document).ready(function () {
       },
       messages: {
         registeremail: {
-          required: "Please enter your email address",
+          required: "Email can not be empty",
           email: "Please enter a valid email address",
         },
         registerpassword: {
-          required: "Please enter your valid password",
+          required: "Password can not be empty",
           minlength: "Enter at least 8 character",
         },
         registerusername: {
-          required: "Please enter your name",
+          required: "Name can not be empty",
+          regex:"Name contain symbols"
         },
         registerphone: {
           required: "Please enter your valid Phone ",
           minlength: "Enter at least 12 digits",
         },
         registeraddress: {
-          required: "Please enter your address ",
+          required: "Address can not be empty",
         },
         registergender: {
           required: "Please select your gender ",
@@ -203,6 +210,9 @@ $(document).ready(function () {
   });
   /*========== New Account validation  ========= */
   $(".subscribebutton").click(function () {
+
+
+
     var form = $("#subscribeform");
     form.validate({
       //ignore: ":not(:visible)",
